@@ -1,0 +1,6 @@
+name: rubify
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: cloud provisoning programmaticaly
