@@ -34,8 +34,8 @@ def create_app():
     import sites 
     app.register_blueprint(sites.bp)
 
-    import virtual_machines
-    app.register_blueprint(virtual_machines.bp)
+    # import virtual_machines
+    # app.register_blueprint(virtual_machines.bp)
 
     return app
 
