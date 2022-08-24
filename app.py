@@ -30,8 +30,8 @@ def create_app():
 
     app.register_blueprint(sites.bp)
 
-    import virtual_machines
+    # import virtual_machines
 
-    app.register_blueprint(virtual_machines.bp)
+    # app.register_blueprint(virtual_machines.bp)
 
     return app
