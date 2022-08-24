@@ -11,7 +11,7 @@ from flask import (
 )
 
 import pulumi
-import pulumi_automation as auto
+import pulumi.automation as auto
 from pulumi_aws import s3
 
 bp = Blueprint("sites", __name__, url_prefix="/sites")
