@@ -1,24 +1,20 @@
-from flask import Flask, render_template
 import os
-from dotenv import load_dotenv
+from flask import Flask, render_template
 
-# Pulumi automatization framework
 import pulumi.automation as auto
 
-load_dotenv()
+import dotenv 
+
+dotenv.load_dotenv()
+
 
 def ensure_plugins():
-    """
-    Ensure that the plugins are installed
-    """
     ws = auto.LocalWorkspace()
     ws.install_plugin("aws", "v4.0.0")
 
+
 def create_app():
     ensure_plugins()
-    """
-    Create the Flask app
-    """
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
         SECRET_KEY=os.environ.get("SECRET_KEY"),
@@ -29,13 +25,13 @@ def create_app():
     @app.route("/", methods=["GET"])
     def index():
         return render_template("index.html")
-    
-    # Using blueprints to separate the routes
-    import sites 
+
+    import sites
+
     app.register_blueprint(sites.bp)
 
-    # import virtual_machines
-    # app.register_blueprint(virtual_machines.bp)
+    import virtual_machines
+
+    app.register_blueprint(virtual_machines.bp)
 
     return app
-
