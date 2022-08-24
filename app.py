@@ -34,4 +34,6 @@ def create_app():
 
     app.register_blueprint(virtual_machines.bp)
 
+    print(app.url_map)
+
     return app
