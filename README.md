@@ -94,7 +94,7 @@ Made with the sole purpose of learning how these platforms work internally, and 
 
 Using **Pulumi** allows us to dinamically create **AWS S3 buckets** to host our code, as well as create a new **AWS EC2** instance to host our application.
 
-###Hosting
+### Hosting
   - **Creating new sit**e
   [![Rubify Hosting Demo][hosting-screenshot]](https://example.com)
 
@@ -104,7 +104,7 @@ Using **Pulumi** allows us to dinamically create **AWS S3 buckets** to host our 
   - **Website deployed**
   [![Rubify Hosting Demo3][hosting-screenshot3]](https://example.com)
 
-###Virtual Machine (VM)
+### Virtual Machine (VM)
   - **Creating new VM**
   [![Rubify VM Demo][vm-screenshot]](https://example.com)
   - **VM created**
