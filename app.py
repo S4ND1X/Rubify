@@ -3,7 +3,7 @@ from flask import Flask, render_template
 
 import pulumi.automation as auto
 
-import dotenv 
+import dotenv
 
 dotenv.load_dotenv()
 
@@ -33,7 +33,5 @@ def create_app():
     import virtual_machines
 
     app.register_blueprint(virtual_machines.bp)
-
-    print(app.url_map)
 
     return app
